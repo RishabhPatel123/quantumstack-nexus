@@ -8,54 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* QuantumStack Dark Theme Design System */
-    --background: 220 28% 7%;
+    /* QuantumStack Purple Theme Design System */
+    --background: 240 18% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 220 25% 9%;
+    --card: 240 15% 10%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 220 25% 9%;
+    --popover: 240 15% 10%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 180 100% 54%;  /* Neon Cyan #17F3E0 */
-    --primary-foreground: 220 28% 7%;
+    --primary: 259 51% 69%;  /* Neon Violet #9F7AEA */
+    --primary-foreground: 240 18% 6%;
 
-    --secondary: 220 20% 15%;
+    --secondary: 240 12% 14%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 20% 12%;
+    --muted: 240 12% 12%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 180 100% 54%;  /* Neon Cyan */
-    --accent-foreground: 220 28% 7%;
+    --accent: 259 51% 69%;  /* Neon Violet */
+    --accent-foreground: 240 18% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 15%;
-    --ring: 180 100% 54%;
+    --border: 240 12% 18%;
+    --input: 240 12% 15%;
+    --ring: 259 51% 69%;
 
     --radius: 0.75rem;
     
-    /* Custom QuantumStack tokens */
-    --quantum-dark: 220 28% 7%;
-    --quantum-darker: 220 30% 5%;
-    --quantum-cyan: 180 100% 54%;
-    --quantum-cyan-glow: 180 100% 54%;
-    --quantum-gray: 220 15% 25%;
-    --quantum-gray-light: 220 15% 35%;
+    /* Custom QuantumStack Purple tokens */
+    --quantum-dark: 240 18% 6%;
+    --quantum-darker: 240 18% 4%;
+    --quantum-purple: 259 59% 29%;  /* Deep Tech Purple #3B1E6F */
+    --quantum-violet: 259 51% 69%;  /* Neon Violet #9F7AEA */
+    --quantum-gray: 240 15% 22%;
+    --quantum-gray-light: 240 15% 32%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--quantum-cyan)) 0%, hsl(var(--quantum-cyan) / 0.7) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--quantum-purple)) 0%, hsl(var(--quantum-violet)) 100%);
     --gradient-dark: linear-gradient(135deg, hsl(var(--quantum-darker)) 0%, hsl(var(--quantum-dark)) 100%);
     --gradient-card: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--quantum-dark)) 100%);
     
     /* Shadows & Effects */
-    --shadow-quantum: 0 10px 40px -10px hsl(var(--quantum-cyan) / 0.3);
+    --shadow-quantum: 0 10px 40px -10px hsl(var(--quantum-violet) / 0.3);
     --shadow-card: 0 8px 32px -8px hsl(var(--quantum-darker) / 0.8);
-    --glow-cyan: 0 0 30px hsl(var(--quantum-cyan) / 0.5);
+    --glow-violet: 0 0 30px hsl(var(--quantum-violet) / 0.5);
 
     --radius: 0.75rem;
 

@@ -59,7 +59,8 @@ export default {
 				quantum: {
 					dark: 'hsl(var(--quantum-dark))',
 					darker: 'hsl(var(--quantum-darker))',
-					cyan: 'hsl(var(--quantum-cyan))',
+					purple: 'hsl(var(--quantum-purple))',
+					violet: 'hsl(var(--quantum-violet))',
 					gray: 'hsl(var(--quantum-gray))',
 					'gray-light': 'hsl(var(--quantum-gray-light))',
 				},
@@ -82,7 +83,7 @@ export default {
 			boxShadow: {
 				'quantum': 'var(--shadow-quantum)',
 				'card': 'var(--shadow-card)',
-				'glow': 'var(--glow-cyan)',
+				'glow': 'var(--glow-violet)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -103,8 +104,8 @@ export default {
 					'50%': { transform: 'translateY(-10px)' }
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--quantum-cyan) / 0.3)' },
-					'50%': { boxShadow: '0 0 30px hsl(var(--quantum-cyan) / 0.6)' }
+					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--quantum-violet) / 0.3)' },
+					'50%': { boxShadow: '0 0 30px hsl(var(--quantum-violet) / 0.6)' }
 				},
 				'fadeInUp': {
 					'0%': { opacity: '0', transform: 'translateY(30px)' },

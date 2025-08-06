@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageCircle, Clock, ArrowRight } from "lucide-react";
+import { Mail, MessageCircle, Clock } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -90,75 +88,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="bg-card border border-border rounded-lg p-8 shadow-card">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-opensans font-medium text-foreground/90 mb-2">
-                      Name *
-                    </label>
-                    <Input 
-                      placeholder="Your name"
-                      className="bg-background border-border focus:border-quantum-cyan transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-opensans font-medium text-foreground/90 mb-2">
-                      Email *
-                    </label>
-                    <Input 
-                      type="email"
-                      placeholder="your.email@company.com"
-                      className="bg-background border-border focus:border-quantum-cyan transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-opensans font-medium text-foreground/90 mb-2">
-                    Company
-                  </label>
-                  <Input 
-                    placeholder="Your company name"
-                    className="bg-background border-border focus:border-quantum-cyan transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-opensans font-medium text-foreground/90 mb-2">
-                    Project Type
-                  </label>
-                  <select className="w-full h-10 px-3 rounded-md border border-border bg-background text-foreground focus:border-quantum-cyan transition-colors">
-                    <option>Select project type</option>
-                    <option>Web Application Development</option>
-                    <option>API Development</option>
-                    <option>Process Automation</option>
-                    <option>Custom Software Solution</option>
-                    <option>System Integration</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-opensans font-medium text-foreground/90 mb-2">
-                    Project Details *
-                  </label>
-                  <Textarea 
-                    placeholder="Tell me about your project, goals, timeline, and any specific requirements..."
-                    rows={5}
-                    className="bg-background border-border focus:border-quantum-cyan transition-colors resize-none"
-                  />
-                </div>
-
-                <Button variant="quantum" size="lg" className="w-full">
-                  Send Message
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-
-                <p className="text-xs text-foreground/60 text-center font-opensans">
-                  By submitting this form, you agree to receive project-related communications. 
-                  Your information is never shared with third parties.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

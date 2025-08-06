@@ -1,35 +1,79 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Contact", href: "/contact" },
+  ];
+
   return (
     <header className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
+        <Link to="/" className="flex items-center space-x-3">
           <img 
-            src="/lovable-uploads/9e18cc67-8a4c-4dd8-9926-293b31e112e4.png" 
+            src="/favicon.ico" 
             alt="QuantumStack Logo" 
             className="h-8 w-auto"
           />
-        </div>
+          <span className="text-xl font-poppins font-bold text-foreground">QuantumStack</span>
+        </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#about" className="text-foreground/80 hover:text-quantum-cyan transition-colors font-opensans">
-            About
-          </a>
-          <a href="#services" className="text-foreground/80 hover:text-quantum-cyan transition-colors font-opensans">
-            Services
-          </a>
-          <a href="#portfolio" className="text-foreground/80 hover:text-quantum-cyan transition-colors font-opensans">
-            Portfolio
-          </a>
-          <a href="#contact" className="text-foreground/80 hover:text-quantum-cyan transition-colors font-opensans">
-            Contact
-          </a>
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="text-foreground/80 hover:text-quantum-violet transition-colors font-opensans"
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
 
-        <Button variant="quantum" size="lg" className="hidden md:inline-flex">
-          Work With Us
-        </Button>
+        <div className="hidden md:flex items-center space-x-4">
+          <Button className="bg-gradient-primary text-background hover:shadow-quantum">
+            Work With Us
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-foreground"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="absolute top-16 left-0 w-full bg-background/95 backdrop-blur-sm border-b border-border md:hidden">
+            <nav className="container mx-auto px-6 py-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="block py-2 text-foreground/80 hover:text-quantum-violet transition-colors font-opensans"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="mt-4">
+                <Button className="w-full bg-gradient-primary text-background hover:shadow-quantum">
+                  Work With Us
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
