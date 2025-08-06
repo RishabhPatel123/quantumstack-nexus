@@ -18,11 +18,15 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        quantum: "bg-gradient-primary text-primary-foreground font-semibold shadow-quantum hover:shadow-glow transition-all duration-300 border border-quantum-cyan/20 hover:scale-105",
+        quantumOutline: "border-2 border-quantum-cyan text-quantum-cyan bg-transparent hover:bg-quantum-cyan hover:text-quantum-dark transition-all duration-300 hover:shadow-glow",
+        quantumGhost: "text-quantum-cyan bg-transparent hover:bg-quantum-cyan/10 hover:text-quantum-cyan transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },
